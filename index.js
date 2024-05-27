@@ -8,7 +8,7 @@ const targetUrl = 'https://126e-179-177-14-153.ngrok-free.app/api/bringoz/Entity
 // Middleware para parsear o body como JSON
 app.use(express.json());
 
-app.post('/webhook', (req, res) => {
+app.post('/webhook', async (req, res) => {
   try {
     const method = req.method;
 	const headers = {...req.headers };
